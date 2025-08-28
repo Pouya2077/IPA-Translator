@@ -1,5 +1,5 @@
-""" Module creates JSON dict
-    only needs to be run ONCE PER CONTAINTER INSTANCE """
+""" Create JSON DICT
+    Only needs to be run ONCE per container instance IF needed"""
 
 import json
 
