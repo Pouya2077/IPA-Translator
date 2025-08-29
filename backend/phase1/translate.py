@@ -43,7 +43,7 @@ def translate_word(word):
     """ Convert English word to IPA """
 
     phonemes = CMU_DICT[word.lower()]
-    return convert_phonemes(phonemes)
+    return "/" + convert_phonemes(phonemes) + "/"
 
 #TODO frontend checks if word provided is English (latin alphabet)
 #TODO consider adding functionality to support punctuation
