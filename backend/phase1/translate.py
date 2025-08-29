@@ -46,4 +46,5 @@ def translate_word(word):
     return convert_phonemes(phonemes)
 
 #TODO frontend checks if word provided is English (latin alphabet)
-#if word cannot be translated, activate phase2
+#TODO consider adding functionality to support punctuation
+#TODO if word cannot be translated, activate phase2
