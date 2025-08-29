@@ -10,7 +10,7 @@ with open("arpabet_dict.json") as file:
 
 def convert_to_ipa(arpabet_char):
     """ Covert from ARPAbet to IPA """
-    return ARPABET_DICT[arpabet_char]
+    return ARPABET_DICT[arpabet_char.upper()]
 
 def convert_phonemes(phonemes):
     """ Convert phonemes to IPA word """
