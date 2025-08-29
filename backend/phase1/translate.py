@@ -2,11 +2,16 @@
 
 import json
 import re
+import os
 
-with open("cmu_dict.json") as file:
+BASE_PATH = os.path.dirname(__file__)
+CMU_DICT_PATH = os.path.join(BASE_PATH, "cmu_dict.json")
+ARPABET_DICT_PATH = os.path.join(BASE_PATH, "arpabet_dict.json")
+
+with open(CMU_DICT_PATH) as file:
     CMU_DICT = json.load(file)          #make dicts available locally
 
-with open("arpabet_dict.json") as file:
+with open(ARPABET_DICT_PATH) as file:
     ARPABET_DICT = json.load(file)
 
 def remove_stress(chars):
