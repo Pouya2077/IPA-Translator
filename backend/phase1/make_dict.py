@@ -4,8 +4,6 @@
 import json
 import csv
 
-
-
 cmu_dict = {}       #DICT[WORD] = PHONEMES
 arpabet_dict = {}   #DICT[ARPABET] = IPA
 

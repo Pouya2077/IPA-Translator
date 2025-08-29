@@ -1,0 +1,1 @@
+from phase1.translate import translate_word

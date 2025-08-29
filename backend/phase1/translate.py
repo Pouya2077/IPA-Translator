@@ -1,12 +1,23 @@
 """ Functionality to translate words to IPA """
 
 import json
+import re
 
 with open("cmu_dict.json") as file:
-    CMU_DICT = json.load(file)          #CMUdict available locally
+    CMU_DICT = json.load(file)          #make dicts available locally
 
 with open("arpabet_dict.json") as file:
     ARPABET_DICT = json.load(file)
+
+def remove_stress(chars):
+    """ Remove stress (numbers) from ARPABET chars """
+    phonemes = []
+
+    for char in chars:
+        char = re.sub(r'\d', '', char)
+        phonemes.append(char)
+
+    return phonemes
 
 def convert_to_ipa(arpabet_char):
     """ Covert from ARPAbet to IPA """
@@ -14,7 +25,8 @@ def convert_to_ipa(arpabet_char):
 
 def convert_phonemes(phonemes):
     """ Convert phonemes to IPA word """
-    chars = list(phonemes)
+    chars = phonemes.split(" ")
+    chars = remove_stress(chars)
     ipa_word = ""
 
     for char in chars:
@@ -30,5 +42,3 @@ def translate_word(word):
 
 #TODO frontend checks if word provided is English (latin alphabet)
 #if word cannot be translated, activate phase2
-
-print(convert_phonemes("word"))
