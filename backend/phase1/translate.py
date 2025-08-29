@@ -2,13 +2,15 @@
 
 import json
 
-with open("dict.json") as file:
-    DICT = json.load(file)          #CMUdict available locally
+with open("cmu_dict.json") as file:
+    CMU_DICT = json.load(file)          #CMUdict available locally
 
-def convert_to_ipa(char):
+with open("arpabet_dict.json") as file:
+    ARPABET_DICT = json.load(file)
+
+def convert_to_ipa(arpabet_char):
     """ Covert from ARPAbet to IPA """
-
-    return char
+    return ARPABET_DICT[arpabet_char]
 
 def convert_phonemes(phonemes):
     """ Convert phonemes to IPA word """
@@ -23,7 +25,7 @@ def convert_phonemes(phonemes):
 def translate_word(word):
     """ Convert English word to IPA """
 
-    phonemes = DICT[word.lower()]
+    phonemes = CMU_DICT[word.lower()]
     return convert_phonemes(phonemes)
 
 #TODO frontend checks if word provided is English (latin alphabet)
