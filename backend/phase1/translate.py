@@ -43,7 +43,7 @@ def convert_phonemes(phonemes):
 def translate_word(word):
     """ Convert English word to IPA """
 
-    word = re.sub(r'[?!]', '', word)        #explicity removal irrelevant punctuation
+    word = re.sub(r'[?!,.]', '', word)        #explicity removal irrelevant punctuation
     phonemes = CMU_DICT[word.lower()]
     return convert_phonemes(phonemes)
 
