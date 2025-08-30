@@ -4,3 +4,4 @@
 # CACHING
 ipa_translator_backend.egg-info
 __pycache__
+.pytest_cache

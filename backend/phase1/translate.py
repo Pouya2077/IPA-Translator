@@ -15,12 +15,12 @@ with open(ARPABET_DICT_PATH) as file:
     ARPABET_DICT = json.load(file)
 
 def remove_specials(chars):
-    """ Remove stress (numbers) from ARPABET chars """
+    """ Remove special characters from chars """
     phonemes = []
 
     for char in chars:
-        char = re.sub(r'\d', '', char)
-        char = re.sub(r'\W', '', char)
+        char = re.sub(r'\d', '', char)      #0-9 removal (stress)
+        char = re.sub(r'\W', '', char)      #special character removal
         phonemes.append(char)
 
     return phonemes
@@ -43,6 +43,7 @@ def convert_phonemes(phonemes):
 def translate_word(word):
     """ Convert English word to IPA """
 
+    word = re.sub(r'[?!]', '', word)        #explicity removal irrelevant punctuation
     phonemes = CMU_DICT[word.lower()]
     return convert_phonemes(phonemes)
 
@@ -52,13 +53,10 @@ def translate_sentence(sentence):
     ipa_sentence = ""
     words = sentence.split(" ")
     for word in words:
-        ipa_sentence = ipa_sentence + translate_word(word)
+        ipa_sentence = ipa_sentence + " " + translate_word(word)
 
-    return f"/{ipa_sentence}/"
+    return "/" + ipa_sentence.strip() + "/"
 
 #TODO frontend checks if word provided is English (latin alphabet)
 #TODO consider adding functionality to support punctuation
 #TODO if word cannot be translated, activate phase2
-
-print(translate_sentence("who likes free cake"))
-print(translate_word("doesn't"))
