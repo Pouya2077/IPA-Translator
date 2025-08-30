@@ -11,3 +11,4 @@ with open(CMU_DICT_PATH) as file:
 with open(ARPABET_DICT_PATH) as file:
     ARPABET_DICT = json.load(file)      #setting up dicts for tests to use
 
+# TODO write test cases
