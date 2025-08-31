@@ -57,6 +57,5 @@ def translate_sentence(sentence):
 
     return "/" + ipa_sentence.strip() + "/"
 
-#TODO frontend checks if word provided is English (latin alphabet)
 #TODO consider adding functionality to support punctuation
 #TODO if word cannot be translated, activate phase2
