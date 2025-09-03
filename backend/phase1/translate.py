@@ -57,5 +57,7 @@ def translate_sentence(sentence):
 
     return "/" + ipa_sentence.strip() + "/"
 
+print(translate_sentence("punctuation"))
+
 #TODO consider adding functionality to support punctuation
 #TODO if word cannot be translated, activate phase2
