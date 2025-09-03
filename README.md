@@ -1,10 +1,10 @@
+# THIS PROJECT IS A WORK - IN - PROGRESS!!
+
 # IPA-Translator
 
 > Takes English sentences and translates them to IPA, the standard alphabet for international linguistical studies. 
 
 **NOTE:** this repository contains the codebase for the translator's front and backend logic. Each part of the project will be hosted separately. The user interacts with a UI (website) that sends requests to the hosted backend. 
-
-## THIS PROJECT IS A WORK - IN - PROGRESS!!
 
 ## ABOUT
 
