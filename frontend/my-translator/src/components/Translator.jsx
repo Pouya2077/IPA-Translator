@@ -14,9 +14,12 @@ function Translator() {
             <h1>This will be the translator page (home page)</h1>
 
             <form>
-                <label for="sentence">Enter Sentence</label>
-                <input type="text" id="sentence" />
-                <button type="submit">TRANSLATE</button>
+                <label>
+                    Enter Sentence
+                    <input type="text" />
+                    <button type="submit">TRANSLATE</button>
+                </label>
+
             </form>
 
             <button onClick={() => {routeTo("/about")}}>ABOUT</button>
