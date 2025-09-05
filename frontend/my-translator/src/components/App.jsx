@@ -10,7 +10,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Translator />} />
                 <Route path="/about" element={<About />} />
-                <Route path="resources" element={<Resources />} />
+                <Route path="/resources" element={<Resources />} />
             </Routes>
         </BrowserRouter>
     )
