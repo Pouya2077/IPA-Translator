@@ -1,3 +1,5 @@
+""" Exploratory testing - subject to automation later """
+
 from phase1 import translate_word
 from phase1 import translate_sentence
 

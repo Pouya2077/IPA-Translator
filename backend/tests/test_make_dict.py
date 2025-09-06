@@ -1,3 +1,5 @@
+""" Exploratory testing - subject to automation later """
+
 import os
 import json
 import csv
